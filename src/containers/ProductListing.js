@@ -21,14 +21,26 @@ const ProductListing = () => {
     },[])
 
     return (
-        <div className="ui grid container" style={topMargin}>
+        <div className="ui container" style={topMargin}>
             <h2>Product listing</h2>
-            <ProductComponent/>
+            <div className="product_container" style={pro_con}>
+                <ProductComponent/>
+            </div>
+            
         </div>
     )
 }
 
 const topMargin = {
-    marginTop: "20px",
+    marginTop: "50px",
 }
+
+const pro_con = {
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr',
+    gridRowGap: '20px',
+    gridColumnGap: '25px'
+}
+
+
 export default ProductListing
